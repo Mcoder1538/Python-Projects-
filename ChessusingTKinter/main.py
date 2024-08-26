@@ -8,7 +8,7 @@ from tkinter.simpledialog import askstring
 class ChessApp(tk.Tk):
     def __init__(self):
         super().__init__()
-        self.title("Chess Game")
+        self.title("Chess Game (Mcoder1538)")
         self.geometry("600x600")
         self.board = chess.Board()
         self.squares = [[None for _ in range(8)] for _ in range(8)]
@@ -20,7 +20,7 @@ class ChessApp(tk.Tk):
         self.create_board()
         self.create_menu()
         self.update_board()
-        self.engine = chess.engine.SimpleEngine.popen_uci("C:/stockfish/stockfish/stockfish-windows-x86-64-avx2.exe")  # Update this path
+        self.engine = chess.engine.SimpleEngine.popen_uci("C:/path/to/your/stockfish")  # Update this path
     
     def create_board(self):
         for row in range(8):
